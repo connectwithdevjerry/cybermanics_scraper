@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.14.0"
+  },
+  "scripts": {
+    "start": "node cybermanics.js"
+  }
+}

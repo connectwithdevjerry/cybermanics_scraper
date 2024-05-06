@@ -1,5 +1,5 @@
-// const { Builder, Browser, Keys, By } = require("selenium-webdriver");
-// const chrome = require("selenium-webdriver/chrome");
+const { Builder, Browser, Keys, By } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
 
 // // please note that the user of this code needs to have chrome webdriver installed on the client computer. After installation, also ensure the webdriver is set to path. How to install the webdriver? use this link https://chromedriver.storage.googleapis.com/index.html
 

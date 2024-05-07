@@ -1,15 +1,15 @@
 const { Builder, Browser, Keys, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
-// // please note that the user of this code needs to have chrome webdriver installed on the client computer. After installation, also ensure the webdriver is set to path. How to install the webdriver? use this link https://chromedriver.storage.googleapis.com/index.html
+// please note that the user of this code needs to have chrome webdriver installed on the client computer. After installation, also ensure the webdriver is set to path. How to install the webdriver? use this link https://chromedriver.storage.googleapis.com/index.html
 
-// const setDate = (today) => {
-//   let yyyy = today.getFullYear();
-//   let mm = today.getMonth() + 1; // Months start at 0!
-//   let dd = today.getDate();
-//   let todays_date = `${dd}-${mm}-${yyyy}`;
-//   return todays_date;
-// };
+const setDate = (today) => {
+  let yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1; // Months start at 0!
+  let dd = today.getDate();
+  let todays_date = `${dd}-${mm}-${yyyy}`;
+  return todays_date;
+};
 
 // const sugar_beach = async () => {
 //   let options = new chrome.Options();

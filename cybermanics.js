@@ -134,4 +134,4 @@ const sugar_beach = async () => {
   await drivers.quit();
 };
 
-// sugar_beach();
+sugar_beach();

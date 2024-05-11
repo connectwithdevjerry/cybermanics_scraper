@@ -1,8 +1,8 @@
-# from selenium.webdriver import Chrome, ChromeOptions
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.common.by import By
-# import time, datetime, pandas as pd
+from selenium.webdriver import Chrome, ChromeOptions
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+import time, datetime, pandas as pd
 
 # # this is a python code that scrapes data from sugarbeach website, all you need to do is to sit back and run the code while you enjoy the scraping-ride. Thank you. The code automatically installs the chrome webdriver and also set it to path. This developer deserves an applause.. lol
 

@@ -4,22 +4,22 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time, datetime, pandas as pd
 
-# # this is a python code that scrapes data from sugarbeach website, all you need to do is to sit back and run the code while you enjoy the scraping-ride. Thank you. The code automatically installs the chrome webdriver and also set it to path. This developer deserves an applause.. lol
+# this is a python code that scrapes data from sugarbeach website, all you need to do is to sit back and run the code while you enjoy the scraping-ride. Thank you. The code automatically installs the chrome webdriver and also set it to path. This developer deserves an applause.. lol
 
-# options = ChromeOptions()
-# options.headless = True
-# # options.add_argument("--headless=new")
+options = ChromeOptions()
+options.headless = True
+# options.add_argument("--headless=new")
 
-# start = time.time()
+start = time.time()
 
-# run_all_sites_once = False
+run_all_sites_once = False
 
-# driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
-# driver.maximize_window()
+driver = Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver.maximize_window()
 
-# num = 0
-# todays_date = datetime.date.today()
-# tomorrow = todays_date + datetime.timedelta(days=1)
+num = 0
+todays_date = datetime.date.today()
+tomorrow = todays_date + datetime.timedelta(days=1)
 
 # def get_room_divs():
 #         """

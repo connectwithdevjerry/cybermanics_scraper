@@ -21,62 +21,62 @@ num = 0
 todays_date = datetime.date.today()
 tomorrow = todays_date + datetime.timedelta(days=1)
 
-# def get_room_divs():
-#         """
-#         Helper function, associated with sugar beach
-#         """
-#         room_divs = driver.find_elements(By.XPATH, "//div[@class='app_row']//div[contains(@class, 'app_col-md-12 app_col-lg-12')]")
-#         return room_divs
+def get_room_divs():
+        """
+        Helper function, associated with sugar beach
+        """
+        room_divs = driver.find_elements(By.XPATH, "//div[@class='app_row']//div[contains(@class, 'app_col-md-12 app_col-lg-12')]")
+        return room_divs
 
-# def sugar_beach():
-#     global num
-#     """
-#     This function scrapes sugar beach website
-#     """
+def sugar_beach():
+    global num
+    """
+    This function scrapes sugar beach website
+    """
     
-#     website_url = f"https://reservations.viceroyhotelsandresorts.com/?_ga=2.63980905.754880256.1697504574-1226995346.1697504574&adult=1&arrive={todays_date}&chain=1003&child=1&childages=17&currency=USD&depart={tomorrow}&hotel=22215&level=hotel&locale=en-US&rooms=1"
+    website_url = f"https://reservations.viceroyhotelsandresorts.com/?_ga=2.63980905.754880256.1697504574-1226995346.1697504574&adult=1&arrive={todays_date}&chain=1003&child=1&childages=17&currency=USD&depart={tomorrow}&hotel=22215&level=hotel&locale=en-US&rooms=1"
 
-#     driver.get(website_url)
+    driver.get(website_url)
 
-#     driver.implicitly_wait(30)
+    driver.implicitly_wait(30)
 
-#     hotel_name = driver.find_element(By.ID, "heroTitle").text
-#     print(f"The hotel name is {hotel_name}")
+    hotel_name = driver.find_element(By.ID, "heroTitle").text
+    print(f"The hotel name is {hotel_name}")
 
-#     button = driver.find_element(By.XPATH, "//div[@class='select_container select_hasValue']//button[@class='select_hiddenInput']")
-#     button.click()
-#     lis = driver.find_element(By.XPATH, "//ul[@class='select_dropdown']//li")
-#     lis.click()
+    button = driver.find_element(By.XPATH, "//div[@class='select_container select_hasValue']//button[@class='select_hiddenInput']")
+    button.click()
+    lis = driver.find_element(By.XPATH, "//ul[@class='select_dropdown']//li")
+    lis.click()
 
-#     itr = get_room_divs()
+    itr = get_room_divs()
 
-#     for di in itr:
-#         room_divs = get_room_divs()
-#         room_name = room_divs[num].find_element(By.TAG_NAME, "h2").text
-#         roomsize_guests = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_guests']/span").text
-#         roomsize_guests = roomsize_guests.split()[-1] #get roomsize
-#         roomsize_bed = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_bed']/span").text
-#         roomsize_area = room_divs[num].find_element(By.XPATH, "//div[@class='thumb-cards_price']/span").text
-#         roomsize_size = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_size']").text.replace(r"\nsquare feet","")
-#         price = room_divs[num].find_element(By.CLASS_NAME, "thumb-cards_price").text
-#         other_info = room_divs[num].find_elements(By.TAG_NAME, "li")
-#         li = [i.text for i in other_info]
+    for di in itr:
+        room_divs = get_room_divs()
+        room_name = room_divs[num].find_element(By.TAG_NAME, "h2").text
+        roomsize_guests = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_guests']/span").text
+        roomsize_guests = roomsize_guests.split()[-1] #get roomsize
+        roomsize_bed = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_bed']/span").text
+        roomsize_area = room_divs[num].find_element(By.XPATH, "//div[@class='thumb-cards_price']/span").text
+        roomsize_size = room_divs[num].find_element(By.XPATH, "//div[@class='guests-and-roomsize_item guests-and-roomsize_size']").text.replace(r"\nsquare feet","")
+        price = room_divs[num].find_element(By.CLASS_NAME, "thumb-cards_price").text
+        other_info = room_divs[num].find_elements(By.TAG_NAME, "li")
+        li = [i.text for i in other_info]
 
-#         output = {
-#             'room_name': room_name,
-#             'roomsize_guests': roomsize_guests,
-#             'roomsize_bed': roomsize_bed,
-#             'roomsize_size': roomsize_size,
-#             'roomsize_area': roomsize_area,
-#             'price_per_night': price,
-#             'store_id': 84,
-#             'other_info': li,
-#         }
-#         print(output, end='\n')
-#         num+=1
+        output = {
+            'room_name': room_name,
+            'roomsize_guests': roomsize_guests,
+            'roomsize_bed': roomsize_bed,
+            'roomsize_size': roomsize_size,
+            'roomsize_area': roomsize_area,
+            'price_per_night': price,
+            'store_id': 84,
+            'other_info': li,
+        }
+        print(output, end='\n')
+        num+=1
 
-#     end = time.time()
-#     print(f'the time used is {end-start}s')
+    end = time.time()
+    print(f'the time used is {end-start}s')
 
 # def grace_bay_club():
 #     global driver, num

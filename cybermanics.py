@@ -117,16 +117,16 @@ def grace_bay_club():
 
 
 
-# def nizuc():
-#     global num, driver
-#     website = f"https://be.synxis.com/?adult=2&arrive={todays_date}&chain=10237&child=0&currency=USD&depart={tomorrow}&hotel=58283&level=hotel&locale=en-US&rooms=1"
-#     driver.get(website)
-#     itr = get_room_divs()
-#     for div in itr:
-#         room_div = get_room_divs()[num]
-#         room_name = room_div.find_element(By.XPATH, "//h2[@class='app_heading1']").text
-#         print(room_name)
-#         num+=1
+def nizuc():
+    global num, driver
+    website = f"https://be.synxis.com/?adult=2&arrive={todays_date}&chain=10237&child=0&currency=USD&depart={tomorrow}&hotel=58283&level=hotel&locale=en-US&rooms=1"
+    driver.get(website)
+    itr = get_room_divs()
+    for div in itr:
+        room_div = get_room_divs()[num]
+        room_name = room_div.find_element(By.XPATH, "//h2[@class='app_heading1']").text
+        print(room_name)
+        num+=1
 
 
 # # nizuc()

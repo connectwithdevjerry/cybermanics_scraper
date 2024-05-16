@@ -129,6 +129,6 @@ def nizuc():
         num+=1
 
 
-# # nizuc()
-# # grace_bay_club()
-# sugar_beach()
+# nizuc()
+# grace_bay_club()
+sugar_beach()
